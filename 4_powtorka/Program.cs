@@ -111,14 +111,71 @@
 //}
 //Console.ReadKey();
 
+////Zadanie 5
 
-////Zadanie 4
+// int exam=57;
 
-int exam=57;
+// switch (exam)
+// {
+    // case < 0:
+    // case > 100:
+		// Console.WriteLine("Wartość poza zakresem");
+		// break;
+	// case <40:
+		// Console.WriteLine("Ocena Niedostateczna");
+		// break;
+	// case <55:
+		// Console.WriteLine("Ocena Dopuszczająca");
+		// break;
+	// case <70:
+		// Console.WriteLine("Ocena Dostateczna");
+		// break;
+	// case <85:
+		// Console.WriteLine("Ocena Dobra");
+		// break;
+	// case <99:
+		// Console.WriteLine("Ocena Bardzo Dobra");
+		// break;
+	// case <101:
+		// Console.WriteLine("Ocena Celująca");
+		// break;
 
-switch (exam)
-{
-    case < 0:
-    case > 100:
+// }
 
+///Kolekcje
+//Zadanie 1
+
+// string [] colors={"white","black","red","blue"};
+
+// Console.WriteLine(string[0]);
+// Console.WriteLine(string[3]);
+
+//Zadanie 2
+
+// int [] numbers={1,2,3,4,5,6,7,8,9,10};
+		
+// for(int i=0;i<numbers.Length ;i++){
+	// Console.WriteLine($"Liczba: {numbers[i]}");
+// }
+
+// foreach(int n in numbers){
+	// Console.WriteLine($"Liczba: {n}");
+// }
+// int i_while=0;
+// while(i_while<numbers.Length){
+	// Console.WriteLine($"Liczba: {numbers[i_while]}");
+	// i_while++;
+// }
+
+//Zadanie 3
+List<string> fruits = new List<string>();
+		
+fruits.Add("Jabłko");
+fruits.Add("Banan");
+fruits.Add("Kiwi");
+fruits.Add("Grejpfrut");
+
+for(int i=0;i<3;i++){
+	Console.Write(fruits[i]+", ");
 }
+Console.Write(fruits[fruits.Count-1]);
