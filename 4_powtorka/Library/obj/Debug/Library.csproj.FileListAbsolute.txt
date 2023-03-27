@@ -1,0 +1,3 @@
+C:\Users\enix\source\MVC\Library\obj\Debug\Library.csproj.AssemblyReference.cache
+C:\Users\enix\source\MVC\Library\obj\Debug\Library.csproj.SuggestedBindingRedirects.cache
+C:\Users\enix\source\MVC\Library\obj\Debug\Library.csproj.CoreCompileInputs.cache
