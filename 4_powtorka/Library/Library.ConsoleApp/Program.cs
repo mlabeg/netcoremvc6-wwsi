@@ -10,6 +10,14 @@ namespace Library.ConsoleApp
     {
         static void Main(string[] args)
         {
+            
+            Console.Write("Login: );
+            string login = Console.ReadLine();
+            Console.Write("Hasło: );
+            string haslo = Console.ReadLine();
+                          if(login=="Admin"&& haslo=="password"){
+                              
+            
         }
     }
 }
