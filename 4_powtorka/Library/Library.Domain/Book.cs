@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace Library.Domain
 {
+    //public enum BookState :ushort
+    //{
+    //    //available =0,
+    //    //unavailable =1
+          
+    //}
     public class Book
     {
         public string Title { get; set; }
@@ -16,7 +22,14 @@ namespace Library.Domain
         public int ProductsAvailable { get; set; }
         public decimal Price { get; set; }
 
-        public Book() { }
+        public int State { get; set; }
+       // BookState State { get; set; } //0 - unavaliable, 1 - avaliable
+
+        public Book()
+        {
+            //State = BookState.avaliable;
+            State = 1;
+        }
 
         public Book(string title, string author, int publicationYear, string isbn, int productsAvailable, decimal price)
         {
@@ -33,5 +46,4 @@ namespace Library.Domain
             return $"Title: {Title} Author: {Author} ProductsAvailable: {ProductsAvailable}";
         }
     }
-}
 }
