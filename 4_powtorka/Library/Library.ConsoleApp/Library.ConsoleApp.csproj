@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BooksService.cs" />
+    <Compile Include="OrderService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -50,12 +53,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Library.Domain\Library.Domain.csproj">
-      <Project>{cfc939fb-8e42-4f85-8595-42d0e80840f0}</Project>
+    <ProjectReference Include="..\..\Logic\Library.Domain\Library.Domain.csproj">
+      <Project>{e7bc0a8c-1266-489b-a75d-58440e5e2837}</Project>
       <Name>Library.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Library.Persistence\Library.Persistence.csproj">
-      <Project>{e5e089b6-576f-44b6-a6dc-0112e6b49fd8}</Project>
+    <ProjectReference Include="..\..\Logic\Library.Persistence\Library.Persistence.csproj">
+      <Project>{c222f882-e81d-422d-a739-6f60ed19510b}</Project>
       <Name>Library.Persistence</Name>
     </ProjectReference>
   </ItemGroup>
