@@ -1,0 +1,12 @@
+C:\Users\Mateusz\source\repos\Lab3\Gebal.UITools\bin\Debug\Gebal.UITools.dll
+C:\Users\Mateusz\source\repos\Lab3\Gebal.UITools\bin\Debug\Gebal.UITools.pdb
+C:\Users\Mateusz\source\repos\Lab3\Gebal.UITools\obj\Debug\Gebal.UITools.csproj.CoreCompileInputs.cache
+C:\Users\Mateusz\source\repos\Lab3\Gebal.UITools\obj\Debug\Gebal.UITools.dll
+C:\Users\Mateusz\source\repos\Lab3\Gebal.UITools\obj\Debug\Gebal.UITools.pdb
+C:\Users\Mateusz\source\repos\Lab3\Gebal.UITools\obj\Debug\Gebal.UITools.csproj.AssemblyReference.cache
+C:\Users\enix\source\repos\ksiazkaTelefoniczna\Gebal.UITools\bin\Debug\Gebal.UITools.dll
+C:\Users\enix\source\repos\ksiazkaTelefoniczna\Gebal.UITools\bin\Debug\Gebal.UITools.pdb
+C:\Users\enix\source\repos\ksiazkaTelefoniczna\Gebal.UITools\obj\Debug\Gebal.UITools.csproj.AssemblyReference.cache
+C:\Users\enix\source\repos\ksiazkaTelefoniczna\Gebal.UITools\obj\Debug\Gebal.UITools.csproj.CoreCompileInputs.cache
+C:\Users\enix\source\repos\ksiazkaTelefoniczna\Gebal.UITools\obj\Debug\Gebal.UITools.dll
+C:\Users\enix\source\repos\ksiazkaTelefoniczna\Gebal.UITools\obj\Debug\Gebal.UITools.pdb

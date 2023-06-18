@@ -1,0 +1,6 @@
+C:\Users\enix\source\MVC\Library\UITools\bin\Debug\Gebal.UITools.dll
+C:\Users\enix\source\MVC\Library\UITools\bin\Debug\Gebal.UITools.pdb
+C:\Users\enix\source\MVC\Library\UITools\obj\Debug\UITools.csproj.AssemblyReference.cache
+C:\Users\enix\source\MVC\Library\UITools\obj\Debug\UITools.csproj.CoreCompileInputs.cache
+C:\Users\enix\source\MVC\Library\UITools\obj\Debug\Gebal.UITools.dll
+C:\Users\enix\source\MVC\Library\UITools\obj\Debug\Gebal.UITools.pdb
