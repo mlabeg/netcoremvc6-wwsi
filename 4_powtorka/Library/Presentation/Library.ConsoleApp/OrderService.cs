@@ -5,62 +5,75 @@ using System.Text;
 using System.Threading.Tasks;
 using Library.Domain;
 using Library.Persistence;
+using MenuUITools;
 
 
 namespace Library.ConsoleApp
 {
-    internal class OrderService
-    {
-        private OrdersRepository _ordersRepository;
-        public OrderService(OrdersRepository ordersRepository)
-        {
-            _ordersRepository = ordersRepository;
-        }
+	internal class OrderService
+	{
+		private OrdersRepository _ordersRepository;
+		MenuUITools.Menu menu = new MenuUITools.Menu();
+		public OrderService(OrdersRepository ordersRepository)
+		{
+			_ordersRepository = ordersRepository;
+		}
 
-        public bool PlaceOrder()
-        {
-            Order order = new Order();
-
-            Console.WriteLine("Add \n End");//<-wrocić tutaj po dodaniu książki, żeby zapytać czy dodać następną
-
-            //add
-            Console.WriteLine("Podaj Id ksiazki: ");
-            int bookId = Convert.ToInt32(Console.ReadLine());
-
-
-            Console.WriteLine(" Podaj ilość: " );
-            int amount = Convert.ToInt32(Console.ReadLine());
+		public bool PlaceOrder()
+		{
+			Order order = new Order();
+			//menu.Konfiguruj()
 
 
 
-            BookOrdered bookOrdered = new BookOrdered(bookId,amount);
-            order.BooksOrderedList.Add(bookOrdered);
+
+			string action = "add";
+
+			int bookId;
+			int amount;
+			do
+			{
+				Console.WriteLine("Podaj Id ksiazki: ");
+				bookId = Convert.ToInt32(Console.ReadLine());
+
+				Console.WriteLine(" Podaj ilość: ");
+				amount = Convert.ToInt32(Console.ReadLine());
+
+			Console.WriteLine("\nWybierz akcje: \n Add \n End");//<-wrocić tutaj po dodaniu książki, żeby zapytać czy dodać następną
+				do
+				{
+					action = Console.ReadLine();
+				} while (action != "end" && action != "add");
+			} while (action != "end");
 
 
-            //end 
-            Console.WriteLine("End");
-            Console.ReadKey();
-
-            if(!(order is null))
-            {
-                _ordersRepository.Insert(order);
-               // Console.WriteLine("Pomyślnie dodano zamówienei do bazy!");
-                return true;
-            }
-            else
-            {
-                //Console.WriteLine("BŁąd przy dodawaniu zamówienia");
-                return false;
-            }
-        }
+			BookOrdered bookOrdered = new BookOrdered(bookId, amount);
+			order.BooksOrderedList.Add(bookOrdered);
 
 
-        public List<Order> ListAll()
-        {
-            return _ordersRepository.GetAll();
-        }
+		
+			Console.ReadKey();
 
-    }
+			if (!(order is null))
+			{
+				_ordersRepository.Insert(order);
+				// Console.WriteLine("Pomyślnie dodano zamówienei do bazy!");
+				return true;
+			}
+			else
+			{
+				Console.WriteLine("Brak pozycji zamówienia zamówienia");
+				return false;
+			}
+		}
+
+
+		public List<Order> ListAll()
+		{
+			return _ordersRepository.GetAll();
+		}
+
+	}
 }
 //TODO dopracować PlaceOrder (w tym momencie można dodać tylko 1 książkę do zamówienia), możesz dodać tu menu z poprzedniego semestru
 

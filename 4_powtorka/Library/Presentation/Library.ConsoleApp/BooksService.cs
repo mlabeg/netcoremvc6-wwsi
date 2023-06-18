@@ -16,27 +16,25 @@ namespace Library.ConsoleApp
            _repository  = booksRepository;
         }
 
-       /*T SafeAddValue<T>(string value)
-        {
-           // Type type=value.GetType();
-
-            if (int.TryParse(value, out int result))
-                return result;
-        }
-       */
-
         internal void AddBook()
         {
             Console.WriteLine("Podaj tytuł: ");
             string title=Console.ReadLine();
             Console.WriteLine("Podaj Autora: ");
             string author=Console.ReadLine();
+
             Console.WriteLine("Podaj rok wydania: ");
-            int year = int.Parse(Console.ReadLine());
+            int year;
+            int.TryParse(Console.ReadLine(), out year);
+         
+
             Console.WriteLine("Podaj numer ISBN");
             string isbn=Console.ReadLine();
+
             Console.WriteLine("Podaj ile jest dostepnych pozycji: ");
-            int productsAvailable=int.Parse(Console.ReadLine());
+            int productsAvailable;
+            int.TryParse(Console.ReadLine(), out productsAvailable);
+
             decimal price=0;
             int check = 0;
             do
@@ -68,21 +66,7 @@ namespace Library.ConsoleApp
         }
         internal void Remove()
         {
-            Console.WriteLine("Podaj tytuł książki do usunięcia: ");
-            string toRemove=Console.ReadLine();
-            if (toRemove is null)
-            {
-                return;
-            }
-            if (_repository.RemoveByTitle(toRemove))
-            {
-                Console.WriteLine("Pomyślnie usunięto książkę!");
-            }
-            else
-            {
-                Console.WriteLine("Błąd pod czas usuwania książki!");
-            }
-
+            _repository.RemoveTitle();
         }
         internal bool ListBooks()
         {
@@ -92,7 +76,7 @@ namespace Library.ConsoleApp
             {
                 return false;
             }
-           
+            Console.WriteLine();
             for(int i = 0; i < repository.Count;i++)
             {
                 Console.WriteLine($"{i+1}. {repository[i].Title}\t\t{repository[i].Author}");
