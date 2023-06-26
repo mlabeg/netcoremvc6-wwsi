@@ -9,8 +9,7 @@ namespace MenuUITools
     public class Menu
     {
         private String[] elementy;
-        List<string> elementyList = new List<string>();//spr czy potrzebne
-        private int najdluzszyElement = 0;
+        public int najdluzszyElement = 0;
       
         public void Konfiguruj(string[] elementyMenu)
         {
@@ -30,28 +29,17 @@ namespace MenuUITools
                 elementy = new string[0];
             }
         }
-        public void Konfiguruj(List<string> kontakty)
-        {
-            if (kontakty.Count <= 100)
-            {
-                elementy=kontakty.ToArray();   
-                for (int i = 0; i < elementy.Length; i++)
-                {
-                    if (kontakty[i].Length > najdluzszyElement)
-                    {
-                        najdluzszyElement = kontakty[i].Length;
-                    }
-                }
-            }
-            else
-            {
-                elementy = new string[0];
-            }
+
+		public void Konfiguruj(List<string> kontakty)
+		{
+			elementy = kontakty.ToArray();
+            Konfiguruj(elementy);
             
-        }
-        public int Wyswietl()
+		}
+		public int Wyswietl()
+            //TODO 1 przy każdym wywołaniu funkcji dodaj przed Consol.Clear();
         {
-            Console.Clear();
+           // Console.Clear();
             int wybrany = 0;
             if (elementy != null)
             {
@@ -165,5 +153,12 @@ namespace MenuUITools
             Console.ResetColor();
             return wybrany;
         }
+
+        /*
+        public int[] Zaznacz()
+        {
+
+        }
+        */
     }
 }
