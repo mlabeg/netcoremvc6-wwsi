@@ -27,19 +27,24 @@ namespace Library.ConsoleApp
 
 		public bool PlaceOrder()
 		{
-
 			if (_booksRepository.DatabaseCount() == 0)
 			{
 				Console.WriteLine("Brak książek do wypożyczenia");
 				return false;
 			}
+			
+			bool checkAction(string action)
+			{
+				return String.Compare(action, "add", true) != 0 && String.Compare(action, "end", true) != 0;
+			}
+			
 			Order order = new Order();
 			menuBooks.Konfiguruj(this._booksRepository.TitleAuthorProductsAvalliableList());
 			var _booksRepositoryList = this._booksRepository.GetAll();
 
 			int amount;
 			int positionChosen;
-			string action = "add";
+			string action;
 
 			do
 			{
@@ -110,11 +115,13 @@ namespace Library.ConsoleApp
 		}
 		//TODO 3.5 dodać sprawdzanie czy książka jest już w zamówieniu i tylko aktualizowa jej ilość
 
+		/*
 		private bool checkAction(string action)
 		{
 			return String.Compare(action, "add", true) != 0 && String.Compare(action, "end", true) != 0;
 		}
 		//TODO ? czy to nie jest już zbytnie kombinowanie?
+  		*/
 
 		public void ListCurrentOrder(Order order)
 		{
