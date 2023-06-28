@@ -48,6 +48,7 @@
     <Compile Include="OrderService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TODOs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -60,6 +61,10 @@
     <ProjectReference Include="..\..\Logic\Library.Persistence\Library.Persistence.csproj">
       <Project>{c222f882-e81d-422d-a739-6f60ed19510b}</Project>
       <Name>Library.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UITools\UITools.csproj">
+      <Project>{7395E77F-32FA-4D8E-8380-52340D693D6B}</Project>
+      <Name>UITools</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
